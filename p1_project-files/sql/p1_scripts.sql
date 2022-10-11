@@ -53,11 +53,13 @@ INSERT INTO employee_role VALUES
 	
 DROP TABLE IF EXISTS login;
 
---still in process of writing
+--still in process of writing:
 
 CREATE TABLE login (
 	user_id SERIAL PRIMARY KEY,
 	user_name VARCHAR NOT NULL,
 	user_pass VARCHAR NOT NULL,
-	user_role VARCHAR 
+	user_role VARCHAR NOT NULL,
+	user_fname VARCHAR NOT NULL,
+	user_lname VARCHAR REFERENCES staff (staff_fname)
 );
