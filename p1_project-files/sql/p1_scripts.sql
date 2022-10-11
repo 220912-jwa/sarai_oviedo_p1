@@ -27,3 +27,37 @@ INSERT INTO reimbursement_type VALUES
 	(DEFAULT, 'Certification', 100),
 	(DEFAULT, 'Technical Training', 90),
 	(DEFAULT, 'Other', 30);
+	
+DROP TABLE IF EXISTS grading_format;
+
+CREATE TABLE grading_format (
+	gformat_id SERIAL PRIMARY KEY,
+	gformat_name VARCHAR NOT NULL
+);
+
+INSERT INTO grading_format VALUES
+	(DEFAULT, 'Pass/Fail'),
+	(DEFAULT, 'Letter Grade'),
+	(DEFAULT, 'Other');
+
+DROP TABLE IF EXISTS employee_role;
+
+CREATE TABLE employee_role(
+	role_id SERIAL PRIMARY KEY,
+	role_name VARCHAR NOT NULL
+);
+
+INSERT INTO employee_role VALUES
+	(DEFAULT, 'Finance Manager'),
+	(DEFAULT, 'Employee');
+	
+DROP TABLE IF EXISTS login;
+
+--still in process of writing
+
+CREATE TABLE login (
+	user_id SERIAL PRIMARY KEY,
+	user_name VARCHAR NOT NULL,
+	user_pass VARCHAR NOT NULL,
+	user_role VARCHAR 
+);
