@@ -32,4 +32,44 @@ public abstract class UserCredentials {
         this.userID = userID;
     }
 
+    public String getUserName(){
+        return userName;
+    }
+
+    public void setUserName(){
+        this.userName = userName;
+    }
+
+    public String getUserPass(){
+        return userPass;
+    }
+
+    public void setUserPass(){
+        this.userPass = userPass;
+    }
+
+    public String getUserRole(){
+        return userRole;
+    }
+
+    public void setUserROle(){
+        this.userRole = userRole;
+    }
+
+    public String getUserFName(){
+        return userFName;
+    }
+
+    public void setUserFName(){
+        this.userFName = userFName;
+    }
+
+    public String getUserLName(){
+        return userLName;
+    }
+
+    public void setUserLName(){
+        this.userLName = userLName;
+    }
+
 }
