@@ -12,7 +12,7 @@ public class AppDriver {
         Javalin app = Javalin.create(config -> {
             config.enableCorsForAllOrigins();
             config.addStaticFiles("/public", Location.CLASSPATH);
-            config.enableDevLogging();
+            //config.enableDevLogging();
         }).start(8080);
     }
 }
