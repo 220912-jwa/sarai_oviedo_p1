@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tuition Reimbursement Request Form</title>
+</head>
+<body>
+    <div id="formRootDiv">
+        <fieldset>
+            <br />
+            <nav>
+                <a href="">Home</a>
+                <a href="">Tuition Reimbursement Request Form</a>
+                <a href="">Log Out</a>
+            </nav>
+            <h1>Tuition Reimbursement Request Form</h1>
+            <label for="requestDate">Request Date: </label>
+            <input id="requestDate" type="date">
+            <br /><br />
+            <label for="eventDate">Event Date: </label>
+            <input id="eventDate" type="date">
+            <br /><br />
+            <label for="eventTime">Event Time: </label>
+            <textarea id="eventTime" type="text" placeholder="Event time details in terms of hours, days, or months time frame." maxlength="250"></textarea>
+            <br /><br />
+            <label for="eventLocation">Event Location: </label>
+            <textarea id="eventLocation" type="text" placeholder="Event location details in terms of address or other information." maxlength="250"></textarea>
+            <br /><br />
+            <label for="eventDescription">Event Description: </label>
+            <textarea id="eventDescription" type="text" placeholder="Event description details." maxlength="250"></textarea>
+            <br /><br />
+            <label for="eventCost">Event Cost: </label>
+            <input id="eventCost" type="text" placeholder="In 00.00 format.">
+            <br /><br />
+            <label for="gradingFormat">Select Grading Format: </label>
+            <select id="gradingFormat">
+                <option value="passFail">Pass/Fail</option>
+                <option value="letterGrade">Letter Grade</option>
+                <option value="other">Other</option>
+            </select>
+            <br /><br />
+            <label for="requestType">Select Request Type: </label>
+            <select id="requestType">
+                <option value="universityCourse">University Course</option>
+                <option value="seminar">Seminar</option>
+                <option value="certificationPreparationCourse">Certification Preparation Course</option>
+                <option value="certification">Certification</option>
+                <option value="technicalTraining">Technical Training</option>
+                <option value="other">Other</option>
+                <option value="none">None</option>
+            </select>
+            <br /><br />
+            <label for="workJustification">Work Related Justification: </label>
+            <textarea id="workJustification" type="text" placeholder="Work related justification details." maxlength="250"></textarea>
+            <br /><br />
+            <label for="worktimeMissed">Expected Worktime To Be Missed: </label>
+            <textarea id="worktimeMissed" type="text" placeholder="Expected worktime to be missed details." maxlength="250"></textarea>
+            <br /><br />
+            <label for="requestsAlreadyProvided">Requests Already Approved: </label>
+            <textarea id="requestsAlreadyProvided" type="text" placeholder="List any approvals already provided by the Finance Manager before the implementation of the E. R. S. Web App." maxlength="250"></textarea>
+            <br /><br />
+            <label for="requestAlreadyApprovedType">Request Type Already Approved: </label>
+            <select id="requestAlreadyApproved">
+                <option value="universityCourse">University Course</option>
+                <option value="seminar">Seminar</option>
+                <option value="certificationPreparationCourse">Certification Preparation Course</option>
+                <option value="certification">Certification</option>
+                <option value="technicalTraining">Technical Training</option>
+                <option value="other">Other</option>
+                <option value="none">None</option>
+            </select>
+            <br /><br />
+            <button id="submitRequest" type="button" onclick="submitRequest()">Submit</button>
+        </fieldset>
+    </div>
+</body>
+</html>
