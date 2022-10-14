@@ -2,7 +2,7 @@ package dev.oviedo.entities;
 
 import org.eclipse.jetty.server.Authentication;
 
-public abstract class UserCredentials {
+public class UserCredentials {
 //connects with lvl1 login-db
     private int userID;
     private String userName;

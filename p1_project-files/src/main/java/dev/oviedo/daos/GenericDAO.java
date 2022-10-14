@@ -1,4 +1,11 @@
 package dev.oviedo.daos;
 
-public class GenericDAO {
+import java.util.List;
+
+public interface GenericDAO<T> {
+
+    T getById(int staffID);
+
+    List<T> getAll();
+
 }
