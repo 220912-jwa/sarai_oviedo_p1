@@ -28,8 +28,8 @@ public class ReimbursementForm extends Staff{
     }
 
     public ReimbursementForm(int staffID, String staffFName, String staffLName, int availableReimbursement,
-                             int requestID, String requestDate, String eventDate, String eventLocation,
-                             String eventDescription, int eventCost, ReimbursementType eventType,
+                             int requestID, String requestDate, String eventDate, String eventTime, String eventLocation,
+                             String eventDescription, int eventCost, GradingFormat gradeFormatID, ReimbursementType requestType,
                              String workJustification, String missedWorktime, String alreadyApproved,
                              ReimbursementType alreadyApprovedType){
 
@@ -37,10 +37,12 @@ public class ReimbursementForm extends Staff{
         this.requestID = requestID;
         this.requestDate = requestDate;
         this.eventDate = eventDate;
+        this.eventTime = eventTime;
         this.eventLocation = eventLocation;
         this.eventDescription = eventDescription;
         this.eventCost = eventCost;
-        this.requestType = eventType;
+        this.gradeFormatID = gradeFormatID;
+        this.requestType = requestType;
         this.workJustification = workJustification;
         this.missedWorktime = missedWorktime;
         this.alreadyApproved = alreadyApproved;
@@ -72,6 +74,14 @@ public class ReimbursementForm extends Staff{
         this.eventDate = eventDate;
     }
 
+    public String getEventTime(){
+        return eventTime;
+    }
+
+    public void setEventTime(){
+        this.eventTime = eventTime;
+    }
+
     public String getEventLocation(){
         return eventLocation;
     }
@@ -96,8 +106,20 @@ public class ReimbursementForm extends Staff{
         this.eventCost = eventCost;
     }
 
+    public GradingFormat getGradeFormatID(){
+        return gradeFormatID;
+    }
+
+    public void setGradeFormatID(){
+        this.gradeFormatID = gradeFormatID;
+    }
+
     public ReimbursementType getRequestType(){
         return requestType;
+    }
+
+    public void setRequestType(){
+        this.requestType = requestType;
     }
 
     public void setEventType(){
@@ -139,20 +161,22 @@ public class ReimbursementForm extends Staff{
     @Override
     public String toString(){
         return "ReimbursementForm{" +
-                "request_id=" + requestID +
-                ", request_date='" + requestDate + '\'' +
-                ", event_date='" + eventDate + '\'' +
-                ", event_time=" + eventTime +
-                ", event_location=" + eventLocation +
-                ", event_description=" + eventDescription +
-                ", event_cost=" + eventCost +
-                ", gformat_id=" + gradeFormatID +
-                ", request_type=" + requestType +
-                ", request_type=" + workJustification +
-                ", work_related_justification=" + missedWorktime +
-                ", expected_missed_worktime=" + alreadyApproved +
-                ", approvals_already_provided_file=" + alreadyApprovedType +
-                ", approvals_already_provided_event_type=" + alreadyApprovedType +
+                "staffID=" + getStaffID() +
+                ", staffFName='" + getStaffFName() + '\'' +
+                ", staffLName='" + getStaffLName()+ '\'' +
+                ", availableReimbursement='" + getAvailableReimbursement() + '\'' +
+                ", requestID='" + requestDate + '\'' +
+                ", requestDate='" + eventDate + '\'' +
+                ", eventDate=" + eventTime +
+                ", eventLocation=" + eventLocation +
+                ", eventDescription=" + eventDescription +
+                ", eventCost=" + eventCost +
+                ", gradeFormatID=" + gradeFormatID +
+                ", requestType=" + requestType +
+                ", workJustification=" + workJustification +
+                ", missedWorktime=" + missedWorktime +
+                ", alreadyApproved=" + alreadyApproved +
+                ", alreadyApprovedType=" + alreadyApprovedType +
                 '}';
     }
 }

@@ -56,10 +56,10 @@ public class Staff {
     public String toString(){
 
         return "Staff{" +
-                "staff_id=" + staffID +
-                ", staff_fname='" + staffFName + '\'' +
-                ", staff_lname='" + staffLName + '\'' +
-                ", available_reimbursement='" + availableReimbursement + '\'' +
+                "staffID=" + staffID +
+                ", staffFName='" + staffFName + '\'' +
+                ", staffLName='" + staffLName + '\'' +
+                ", availableReimbursement='" + availableReimbursement + '\'' +
                 '}';
 
     }
