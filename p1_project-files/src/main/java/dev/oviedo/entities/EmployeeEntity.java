@@ -1,6 +1,6 @@
 package dev.oviedo.entities;
 
-public class Employee {
+public class EmployeeEntity {
 
     //this entity performs actions
 

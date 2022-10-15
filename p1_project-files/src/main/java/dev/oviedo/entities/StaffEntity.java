@@ -1,17 +1,19 @@
 package dev.oviedo.entities;
 
-public class Staff {
+public class StaffEntity {
 
     //connects w lvl0 staff-db
+
+    //need to move availableReimbursement to StaffService
 
     private int staffID;
     private String staffFName;
     private String staffLName;
     private int availableReimbursement = 1000;
 
-    public Staff(){ }
+    public StaffEntity(){ }
 
-    public Staff(int staffID, String staffFName, String staffLName, int availableReimbursement){
+    public StaffEntity(int staffID, String staffFName, String staffLName, int availableReimbursement){
         this.staffID = staffID;
         this.staffFName = staffFName;
         this.staffLName = staffLName;

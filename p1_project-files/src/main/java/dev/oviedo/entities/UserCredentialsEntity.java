@@ -1,8 +1,6 @@
 package dev.oviedo.entities;
 
-import org.eclipse.jetty.server.Authentication;
-
-public class UserCredentials {
+public class UserCredentialsEntity {
 //connects with lvl1 login-db
     private int userID;
     private String userName;
@@ -11,11 +9,11 @@ public class UserCredentials {
     private String userFName;
     private String userLName;
 
-    public UserCredentials() {
+    public UserCredentialsEntity() {
         //no args constructor
     }
 
-    public UserCredentials (int userID, String userName, String userPass, String userRole, String userFName, String userLName){
+    public UserCredentialsEntity(int userID, String userName, String userPass, String userRole, String userFName, String userLName){
         this.userID = userID;
         this.userName = userName;
         this.userPass = userPass;

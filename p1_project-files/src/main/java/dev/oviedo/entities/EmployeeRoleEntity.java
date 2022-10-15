@@ -1,6 +1,6 @@
 package dev.oviedo.entities;
 
-public enum EmployeeRole {
+public enum EmployeeRoleEntity {
     //connects w lvl0 employee-role-db
     //this entity displays information
 
@@ -9,7 +9,7 @@ public enum EmployeeRole {
 
     private int roleID;
 
-    private EmployeeRole(int roleID){
+    private EmployeeRoleEntity(int roleID){
         this.roleID = roleID;
     }
 

@@ -1,6 +1,6 @@
 package dev.oviedo.entities;
 
-public enum ReimbursementType {
+public enum ReimbursementTypeEntity {
     //connects w reimbursement-types-db
 
     UNIVERSITY_COURSE(1),
@@ -13,7 +13,7 @@ public enum ReimbursementType {
 
     private int eventID;
 
-    private ReimbursementType(int eventID){
+    private ReimbursementTypeEntity(int eventID){
         this.eventID = eventID;
     }
 

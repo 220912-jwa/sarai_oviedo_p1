@@ -1,6 +1,6 @@
 package dev.oviedo.entities;
 
-public enum GradingFormat {
+public enum GradingFormatEntity {
     //connects w lvl0 grading-formats-db
 
     PASS_FAIL(1),
@@ -9,7 +9,7 @@ public enum GradingFormat {
 
     private int gradingFormatID;
 
-    private GradingFormat(int gradingFormatID){
+    private GradingFormatEntity(int gradingFormatID){
         this.gradingFormatID = gradingFormatID;
     }
 }

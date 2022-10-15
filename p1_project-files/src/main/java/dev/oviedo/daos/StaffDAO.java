@@ -1,4 +1,4 @@
 package dev.oviedo.daos;
 
-public class UserDAO {
+public class StaffDAO {
 }

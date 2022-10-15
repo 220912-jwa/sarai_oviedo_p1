@@ -1,6 +1,6 @@
 package dev.oviedo.entities;
 
-public class ReimbursementForm extends Staff{
+public class ReimbursementFormEntity extends StaffEntity {
 
     //connects w tuition-reimbursement-form-db
 
@@ -16,22 +16,22 @@ public class ReimbursementForm extends Staff{
     private String eventLocation;
     private String eventDescription;
     private int eventCost;
-    private GradingFormat gradeFormatID;
-    private ReimbursementType requestType;
+    private GradingFormatEntity gradeFormatID;
+    private ReimbursementTypeEntity requestType;
     private String workJustification;
     private String missedWorktime;
     private String alreadyApproved;
-    private ReimbursementType alreadyApprovedType;
+    private ReimbursementTypeEntity alreadyApprovedType;
 
-    public ReimbursementForm(){
+    public ReimbursementFormEntity(){
         //no args constructor
     }
 
-    public ReimbursementForm(int staffID, String staffFName, String staffLName, int availableReimbursement,
-                             int requestID, String requestDate, String eventDate, String eventTime, String eventLocation,
-                             String eventDescription, int eventCost, GradingFormat gradeFormatID, ReimbursementType requestType,
-                             String workJustification, String missedWorktime, String alreadyApproved,
-                             ReimbursementType alreadyApprovedType){
+    public ReimbursementFormEntity(int staffID, String staffFName, String staffLName, int availableReimbursement,
+                                   int requestID, String requestDate, String eventDate, String eventTime, String eventLocation,
+                                   String eventDescription, int eventCost, GradingFormatEntity gradeFormatID, ReimbursementTypeEntity requestType,
+                                   String workJustification, String missedWorktime, String alreadyApproved,
+                                   ReimbursementTypeEntity alreadyApprovedType){
 
         super(staffID, staffFName, staffLName, availableReimbursement);
         this.requestID = requestID;
@@ -106,7 +106,7 @@ public class ReimbursementForm extends Staff{
         this.eventCost = eventCost;
     }
 
-    public GradingFormat getGradeFormatID(){
+    public GradingFormatEntity getGradeFormatID(){
         return gradeFormatID;
     }
 
@@ -114,7 +114,7 @@ public class ReimbursementForm extends Staff{
         this.gradeFormatID = gradeFormatID;
     }
 
-    public ReimbursementType getRequestType(){
+    public ReimbursementTypeEntity getRequestType(){
         return requestType;
     }
 
@@ -150,7 +150,7 @@ public class ReimbursementForm extends Staff{
         this.alreadyApproved = alreadyApproved;
     }
 
-    public ReimbursementType getAlreadyApprovedType(){
+    public ReimbursementTypeEntity getAlreadyApprovedType(){
         return alreadyApprovedType;
     }
 
