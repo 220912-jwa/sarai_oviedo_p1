@@ -2,10 +2,9 @@ package dev.oviedo.entities;
 
 public class UserCredentialsEntity {
 //connects with lvl1 login-db
-    private int userID;
     private String userName;
     private String userPass;
-    private String userRole;
+    private int userRoleID;
     private String userFName;
     private String userLName;
 
@@ -13,21 +12,12 @@ public class UserCredentialsEntity {
         //no args constructor
     }
 
-    public UserCredentialsEntity(int userID, String userName, String userPass, String userRole, String userFName, String userLName){
-        this.userID = userID;
+    public UserCredentialsEntity(String userName, String userPass, int userRoleID, String userFName, String userLName){
         this.userName = userName;
         this.userPass = userPass;
-        this.userRole = userRole;
+        this.userRoleID = userRoleID;
         this.userFName = userFName;
         this.userLName = userLName;
-    }
-
-    public int getUserID(){
-        return userID;
-    }
-
-    public void setUserID(){
-        this.userID = userID;
     }
 
     public String getUserName(){
@@ -46,12 +36,12 @@ public class UserCredentialsEntity {
         this.userPass = userPass;
     }
 
-    public String getUserRole(){
-        return userRole;
+    public int getUserRole(){
+        return userRoleID;
     }
 
     public void setUserROle(){
-        this.userRole = userRole;
+        this.userRoleID = userRoleID;
     }
 
     public String getUserFName(){
@@ -70,4 +60,14 @@ public class UserCredentialsEntity {
         this.userLName = userLName;
     }
 
+    @Override
+    public String toString() {
+        return "UserCredentialsEntity{" +
+                "userName='" + userName + '\'' +
+                ", userPass='" + userPass + '\'' +
+                ", userRoleID=" + userRoleID +
+                ", userFName='" + userFName + '\'' +
+                ", userLName='" + userLName + '\'' +
+                '}';
+    }
 }
