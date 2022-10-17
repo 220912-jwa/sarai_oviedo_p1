@@ -14,7 +14,7 @@ public class UserCredentialsDAO {
 
     public UserCredentialsEntity getUserByUsername(String userName){
 
-        String sql = "SELECT user_name, user_pass, user_role, user_fname, user_lname FROM login WHERE user_name = '?';";
+        String sql = "SELECT user_name, user_pass, user_role, user_fname, user_lname FROM login WHERE user_name = ?;";
 
         try (Connection genCon = genCU.getConnection()){
 

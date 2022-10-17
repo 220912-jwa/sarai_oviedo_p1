@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <title>Home</title>
+    <link rel="stylesheet" href="appCSS.css">
+    <script src="appJS.js"></script>
 </head>
-<body>
+<body onload="loadPageForUserWithSessionStorage()">
     <div id="homeRootDiv">
         <fieldset>
         <br />
@@ -12,7 +14,7 @@
             <a href="./reimbursement-form.html">Tuition Reimbursement Request Form</a>
             <!--<a href="">Log Out</a>-->
         </nav>
-        <h1>Welcome to the E. R. S. Web App</h1>
+        <h1 id="homeHeader">Welcome to the E. R. S. Web App</h1>
         </fieldset>
     </div>
 </body>

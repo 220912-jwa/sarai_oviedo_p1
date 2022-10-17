@@ -33,7 +33,11 @@ async function userLogin() {
 function loadPageForUserWithSessionStorage() {
 
     let name = sessionStorage.getItem("userName");
-    //let role = sessionStorage.getItem("userRoleID");
+    let role = sessionStorage.getItem("userRoleID");
 
     document.getElementById("homeHeader").innerHTML = `Welcome Back, ${name}.`;
+}
+
+async function userIsEmployee(){
+    //
 }
