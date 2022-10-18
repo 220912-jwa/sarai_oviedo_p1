@@ -1,13 +1,17 @@
 package dev.oviedo.entities;
 
-public class ReimbursementFormEntity extends StaffEntity {
+import dev.oviedo.entities.GradingFormatEntity;
+import dev.oviedo.entities.ReimbursementTypeEntity;
 
-    //connects w tuition-reimbursement-form-db
+public class ReimbursementFormEntity extends StaffEntity {
 
     //inherit staffID from Staff
     //inherit staffFName from Staff
     //inherit staffLName from Staff
     //inherit availableReimbursement from Staff
+
+    //imports GradingFormatEntity
+    //imports ReimbursementTypeEntity
 
     private int requestID;
     private String requestDate;

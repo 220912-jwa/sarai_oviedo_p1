@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="appCSS.css">
     <script src="appJS.js"></script>
 </head>
-<body onload="loadPageForUserWithSessionStorage()">
+<body onload="loadPageForUserWithSessionStorage(), userIsEmployee()">
     <div id="homeRootDiv">
         <fieldset>
         <br />
@@ -15,6 +15,27 @@
             <!--<a href="">Log Out</a>-->
         </nav>
         <h1 id="homeHeader">Welcome to the E. R. S. Web App</h1>
+        <table id="homeTable">
+            <thead>
+                <tr><th colspan="12"><h2 id="homeTableHeader">Your reimbursement requests:</h2></tr>
+                <tr>
+                    <td>Request Date:</td>
+                    <td>Event Date:</td>
+                    <td>Event Time:</td>
+                    <td>Event Location:</td>
+                    <td>Event Description:</td>
+                    <td>Event Cost:</td>
+                    <td>Grading Format:</td>
+                    <td>Request Type:</td>
+                    <td>Work Related Justification:</td>
+                    <td>Expected Worktime To Be Missed:</td>
+                    <td>Requests Already Approved:</td>
+                    <td>Request Type Already Approved:</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
         </fieldset>
     </div>
 </body>

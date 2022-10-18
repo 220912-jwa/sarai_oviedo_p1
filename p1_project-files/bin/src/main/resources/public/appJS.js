@@ -33,7 +33,18 @@ async function userLogin() {
 function loadPageForUserWithSessionStorage() {
 
     let name = sessionStorage.getItem("userName");
-    //let role = sessionStorage.getItem("userRoleID");
+    let role = sessionStorage.getItem("userRoleID");
+    let staffID = sessonStorage.getItem("staffID");
 
     document.getElementById("homeHeader").innerHTML = `Welcome Back, ${name}.`;
+
+    if (role == 2){
+        //userRoleID == employee
+    } else {
+        //userRoleID == manager
+    }
+}
+
+async function userIsEmployee(){
+    //functionality goes here
 }
