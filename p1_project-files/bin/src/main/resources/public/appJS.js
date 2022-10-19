@@ -1,3 +1,5 @@
+let baseURL = "http://localhost:8080";
+
 async function userLogin() {
     
     uName = document.getElementById('userName').value;
@@ -10,9 +12,7 @@ async function userLogin() {
 
     credentialsJSON = JSON.stringify(credentials);
 
-    let baseURL = "http://localhost:8080";
-
-    let res = await fetch(
+        let res = await fetch(
         `${baseURL}/authenticate`,
         {
             method: 'POST',
@@ -40,8 +40,11 @@ function loadPageForUserWithSessionStorage() {
 
     if (role == 2){
         //userRoleID == employee
+        //load all pending requests for staffID
+        
     } else {
         //userRoleID == manager
+        //load all pending requests for all employees
     }
 }
 

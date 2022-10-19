@@ -9,13 +9,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReimbursementFormDAO {
 
     private static ConnectionUtil genCU = ConnectionUtil.getConnectionUtil();
 
-    public static ReimbursementFormEntity getAllRequests(){
+    public static List<ReimbursementFormEntity> getAllRequests(){
+
+        List<ReimbursementFormEntity> allRequests = new ArrayList<>();
 
         String sql = "SELECT staff.staff_id, \n" +
                 "staff.staff_fname,\n" +
@@ -48,9 +51,9 @@ public class ReimbursementFormDAO {
 
             ResultSet rs = ps.executeQuery();
 
-            if (rs.next()){
+            while (rs.next()) {
 
-                ReimbursementFormEntity rF = new ReimbursementFormEntity(
+                ReimbursementFormEntity newRF = new ReimbursementFormEntity(
                         rs.getInt("staff_id"),
                         rs.getString("staff_fname"),
                         rs.getString("staff_lname"),
@@ -67,10 +70,12 @@ public class ReimbursementFormDAO {
                         rs.getString("justification"),
                         rs.getString("expected_missed_worktime"),
                         rs.getString("approvals_already_provided_file"),
-                        ReimbursementTypeEntity.valueOf(rs.getString("approvals_already_provided_event_type")));
+                        ReimbursementTypeEntity.valueOf(rs.getString("approvals_already_provided_event_type"))
+                );
 
-                return rF;
+                allRequests.add(newRF);
             }
+                return allRequests;
 
         } catch (SQLException e){
             e.printStackTrace();
@@ -79,7 +84,9 @@ public class ReimbursementFormDAO {
         return null;
     }
 
-    public static ReimbursementFormEntity getRequestByStaffID(int staffID){
+    public static List<ReimbursementFormEntity> getRequestByStaffID(int staffID){
+
+        List<ReimbursementFormEntity> requestsByStaffID = new ArrayList<>();
 
         String sql = "SELECT staff.staff_id, \n" +
                 "staff.staff_fname,\n" +
@@ -114,9 +121,9 @@ public class ReimbursementFormDAO {
 
                 ResultSet rs = ps.executeQuery();
 
-                if (rs.next()){
+                while (rs.next()){
 
-                    ReimbursementFormEntity rF = new ReimbursementFormEntity(
+                    ReimbursementFormEntity newRF = new ReimbursementFormEntity(
                             rs.getInt("staff_id"),
                             rs.getString("staff_fname"),
                             rs.getString("staff_lname"),
@@ -133,13 +140,19 @@ public class ReimbursementFormDAO {
                             rs.getString("justification"),
                             rs.getString("expected_missed_worktime"),
                             rs.getString("approvals_already_provided_file"),
-                            ReimbursementTypeEntity.valueOf(rs.getString("approvals_already_provided_event_type")));
+                            ReimbursementTypeEntity.valueOf(rs.getString("approvals_already_provided_event_type"))
+                            );
 
-                    return rF;
+                    requestsByStaffID.add(newRF);
+
                 }
 
+            return requestsByStaffID;
+
         } catch (SQLException e){
+
             e.printStackTrace();
+
         }
 
         return null;

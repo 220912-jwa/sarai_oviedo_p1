@@ -1,9 +1,8 @@
 package dev.oviedo.driver;
 
 import dev.oviedo.controllers.*;
-import dev.oviedo.entities.*;
 import dev.oviedo.daos.*;
-import dev.oviedo.services.UserCredentialsAuthenticationService;
+import dev.oviedo.services.*;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 
@@ -14,15 +13,18 @@ public class AppDriver {
     public static void main(String[] args){
 
         //DAOs:
+        ReimbursementFormDAO rfDAO = new ReimbursementFormDAO();
 
         //Services:
+        ReimbursementFormService rFService = new ReimbursementFormService(rfDAO);
 
         //Controllers:
         UserCredentialsAuthenticationController uAC = new UserCredentialsAuthenticationController(
                 new UserCredentialsAuthenticationService(new UserCredentialsDAO()));
 
-        //start Javalin:
+        ReimbursementFormController rFController = new ReimbursementFormController(rFService);
 
+        //start Javalin:
         Javalin app = Javalin.create(config -> {
             config.enableCorsForAllOrigins();
             config.addStaticFiles("/public", Location.CLASSPATH);
@@ -36,10 +38,26 @@ public class AppDriver {
             });
 
             /*path("/logout", () -> {
+
                 delete(ctx -> {
                     ctx.req.getSession().invalidate();
                 });
+
             });*/
+
+            path("/all-requests", () ->{
+
+                get(rFController::getAllRequests);
+
+                path("/{staffID}", () ->{
+
+                    get(rFController::getAllRequestsByStaffID);
+
+                });
+
+            });
+
+            //createRequestPath
 
         });
 

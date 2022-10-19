@@ -13,11 +13,11 @@ public class ReimbursementFormService {
         this.reimbursementFormDAO = reimbursementFormDAO;
     }
 
-    public static ReimbursementFormEntity getRequestByStaffID(int staffID){
+    public static List<ReimbursementFormEntity> getRequestFormByStaffID(int staffID){
         return ReimbursementFormDAO.getRequestByStaffID(staffID);
     }
 
-    public static ReimbursementFormEntity getAllRequests(){
+    public static List<ReimbursementFormEntity> getAllRequests(){
         return ReimbursementFormDAO.getAllRequests();
     }
 

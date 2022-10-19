@@ -14,17 +14,17 @@ public class ReimbursementFormController {
         this.reimbursementFormService = reimbursementFormService;
     }
 
+    //handler
+
     public void getAllRequestsByStaffID(Context ctx){
         int staffID = Integer.parseInt(ctx.pathParam("staffID"));
-        ReimbursementFormEntity requests = ReimbursementFormService.getRequestByStaffID(staffID);
-        //implement a list
+        List<ReimbursementFormEntity> requests = ReimbursementFormService.getRequestFormByStaffID(staffID);
         ctx.status(200);
         ctx.json(requests);
     }
 
     public void getAllRequests(Context ctx){
-        ReimbursementFormEntity requests = ReimbursementFormService.getAllRequests();
-        //implement a list
+        List<ReimbursementFormEntity> requests = ReimbursementFormService.getAllRequests();
         ctx.status(200);
         ctx.json(requests);
     }

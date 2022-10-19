@@ -83,7 +83,7 @@ INSERT INTO login VALUES
 SELECT * FROM login;
 	
 --*************************************************************************************
---still being written and have not added to db
+
 DROP TABLE IF EXISTS tuition_reimbursement;
 
 CREATE TABLE tuition_reimbursement (

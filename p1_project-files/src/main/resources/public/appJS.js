@@ -39,15 +39,63 @@ function loadPageForUserWithSessionStorage() {
     document.getElementById("homeHeader").innerHTML = `Welcome Back, ${name}.`;
 
     if (role == 2){
-        //userRoleID == employee
-        //load all pending requests for staffID
+
+        userIsEmployeeDisplay();
         
-    } else {
-        //userRoleID == manager
-        //load all pending requests for all employees
+    } else if (role == 1){
+
+        userIsFinanceManagerDisplay();
+
     }
 }
 
-async function userIsEmployee(){
-    //functionality goes here
+async function userIsEmployeeDisplay(){
+    
+    allByStaffID();
+
+}
+
+async function userIsFinanceManagerDisplay(){
+    
+    allRequests();
+    
+}
+
+async function allByStaffID(){
+    //load all requests by staffID:
+        
+    //make a call to the backend:
+    
+    //define reference variable
+
+    let allAllByStaffID = document.getElementById('staffID').value;
+    
+    //GET request using fetch with async/await
+
+    let resAllByStaffID = await fetch();
+
+    if (resAllByStaffID.status ===200){
+        let resAllByStaffIDJSON = await resAllByStaffID.json(`${baseURL}/all-requests/${all}`);
+    }
+
+    //select existing table from DOM
+    let requestsTableBody = document.getElementById('homeTableHeader');
+    
+    //create a new tr
+    //let requetsTR
+    
+    //create a td for each property we want displayed in the table
+    
+    //add the newly created tds to the newly created tr
+    
+    //add the tr to the existing table from DOM
+}
+
+async function allRequests(){
+    //load all requests
+    //select existing table from DOM
+    //create a new tr
+    //create a td for each property we want displayed in the table
+    //add the newly created tds to the newly created tr
+    //add the tr to the existing table from DOM
 }
