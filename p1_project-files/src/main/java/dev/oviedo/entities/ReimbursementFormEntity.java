@@ -3,6 +3,8 @@ package dev.oviedo.entities;
 import dev.oviedo.entities.GradingFormatEntity;
 import dev.oviedo.entities.ReimbursementTypeEntity;
 
+import java.sql.Date;
+
 public class ReimbursementFormEntity extends StaffEntity {
 
     //inherit staffID from Staff
@@ -10,16 +12,13 @@ public class ReimbursementFormEntity extends StaffEntity {
     //inherit staffLName from Staff
     //inherit availableReimbursement from Staff
 
-    //imports GradingFormatEntity
-    //imports ReimbursementTypeEntity
-
     private int requestID;
-    private String requestDate;
-    private String eventDate;
+    private Date requestDate;
+    private Date eventDate;
     private String eventTime;
     private String eventLocation;
     private String eventDescription;
-    private int eventCost;
+    private double eventCost;
     private GradingFormatEntity gradeFormatID;
     private ReimbursementTypeEntity requestType;
     private String workJustification;
@@ -31,9 +30,9 @@ public class ReimbursementFormEntity extends StaffEntity {
         //no args constructor
     }
 
-    public ReimbursementFormEntity(int staffID, String staffFName, String staffLName, int availableReimbursement,
-                                   int requestID, String requestDate, String eventDate, String eventTime, String eventLocation,
-                                   String eventDescription, int eventCost, GradingFormatEntity gradeFormatID, ReimbursementTypeEntity requestType,
+    public ReimbursementFormEntity(int staffID, String staffFName, String staffLName, int availableReimbursement, int requestID,
+                                   Date requestDate, Date eventDate, String eventTime, String eventLocation,
+                                   String eventDescription, double eventCost, GradingFormatEntity gradeFormatID, ReimbursementTypeEntity requestType,
                                    String workJustification, String missedWorktime, String alreadyApproved,
                                    ReimbursementTypeEntity alreadyApprovedType){
 
@@ -62,7 +61,7 @@ public class ReimbursementFormEntity extends StaffEntity {
         this.requestID = requestID;
     }
 
-    public String getRequestDate(){
+    public Date getRequestDate(){
         return requestDate;
     }
 
@@ -70,7 +69,7 @@ public class ReimbursementFormEntity extends StaffEntity {
         this.requestDate = requestDate;
     }
 
-    public String getEventDate() {
+    public Date getEventDate() {
         return eventDate;
     }
 
@@ -102,7 +101,7 @@ public class ReimbursementFormEntity extends StaffEntity {
         this.eventDescription = eventDescription;
     }
 
-    public int getEventCost(){
+    public double getEventCost(){
         return eventCost;
     }
 
@@ -169,9 +168,10 @@ public class ReimbursementFormEntity extends StaffEntity {
                 ", staffFName='" + getStaffFName() + '\'' +
                 ", staffLName='" + getStaffLName()+ '\'' +
                 ", availableReimbursement='" + getAvailableReimbursement() + '\'' +
-                ", requestID='" + requestDate + '\'' +
-                ", requestDate='" + eventDate + '\'' +
-                ", eventDate=" + eventTime +
+                ", requestID='" + requestID + '\'' +
+                ", requestDate='" + requestDate + '\'' +
+                ", eventDate=" + eventDate +
+                ", eventTime=" + eventTime +
                 ", eventLocation=" + eventLocation +
                 ", eventDescription=" + eventDescription +
                 ", eventCost=" + eventCost +

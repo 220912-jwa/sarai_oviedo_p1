@@ -2,10 +2,6 @@ package dev.oviedo.entities;
 
 public class StaffEntity {
 
-    //connects w lvl0 staff-db
-
-    //need to move availableReimbursement to StaffService
-
     private int staffID;
     private String staffFName;
     private String staffLName;

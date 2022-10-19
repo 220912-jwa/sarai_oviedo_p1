@@ -1,7 +1,6 @@
 package dev.oviedo.entities;
 
 public enum GradingFormatEntity {
-    //connects w lvl0 grading-formats-db
 
     PASS_FAIL(1),
     LETTER_GRADE(2),
