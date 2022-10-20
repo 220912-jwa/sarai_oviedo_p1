@@ -1,6 +1,8 @@
 # P1 Oviedo Memo
 Sarai Oviedo
 20 October 2022
+## Project Content
+- ERS, or Employee Reimbursement System, is a full-stack web application that allows employees to submit requests for reimbursements for courses, events, and certifications. These requests can then be approved or rejected by the Finance Manager, while the employee is able to track the status of their requests.
 ## Technologies Used
 - Apache Maven
 - AWS RDS
@@ -22,8 +24,6 @@ Sarai Oviedo
 - Postman
 - Selenium
 - VSCode
-## Project Content
-- ERS, or Employee Reimbursement System, is a full-stack web application that allows employees to submit requests for reimbursements for courses, events, and certifications. These requests can then be approved or rejected by the Finance Manager, while the employee is able to track the status of their requests.
 ## Milestones Reached
 - Requirement Traceability Matrix Started
     - Expected: Oct 10
