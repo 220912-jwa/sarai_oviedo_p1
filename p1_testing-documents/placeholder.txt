@@ -1,5 +1,0 @@
-Testing documents on Google Worskpace are:
-
-oviedo_p1_defects-report
-oviedo_p1_rtm
-oviedo_p1_test-cases
